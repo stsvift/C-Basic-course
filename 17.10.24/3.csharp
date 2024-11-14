@@ -1,0 +1,27 @@
+using System;
+
+class Program
+{
+    static void DisplayDigits(int number)
+    {
+        foreach (char digit in number.ToString())
+        {
+            Console.Write($"{digit} ");
+        }
+        Console.WriteLine();
+    }
+
+    static void Main()
+    {
+        Console.Write("Введите целое положительное число: ");
+        if (int.TryParse(Console.ReadLine(), out int number) && number > 0)
+        {
+            Console.Write("Цифры числа: ");
+            DisplayDigits(number);
+        }
+        else
+        {
+            Console.WriteLine("Некорректный ввод. Введите положительное целое число.");
+        }
+    }
+}

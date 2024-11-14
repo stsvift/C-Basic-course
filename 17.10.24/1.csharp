@@ -1,0 +1,23 @@
+using System;
+
+class Program
+{
+    static int CountDigits(string input)
+    {
+        int count = 0;
+        foreach (char c in input)
+        {
+            if (char.IsDigit(c))
+                count++;
+        }
+        return count;
+    }
+
+    static void Main()
+    {
+        Console.Write(Введите строку );
+        string input = Console.ReadLine();
+        int digitCount = CountDigits(input);
+        Console.WriteLine($Количество цифр в строке {digitCount});
+    }
+}
