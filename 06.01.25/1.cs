@@ -1,5 +1,7 @@
 using System;
 
+// Вариант 7
+
 class Program
 {
     static void Main()
